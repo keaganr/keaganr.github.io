@@ -22,7 +22,7 @@ $('#weeklyAdGo').on("click", function() {
 	var searchTerm = $("#searchTerm").val();
 	var devKey = $("#devKeyWeekly").val();
 
-	var endpoint = 'http://api.target.com/v1/promotions/weeklyad/' + storeSlug + '/search?q=' + searchTerm + '&key=' + devKey;
+	var endpoint = 'https://api.target.com/v1/promotions/weeklyad/' + storeSlug + '/search?q=' + searchTerm + '&key=' + devKey;
 
 	$.getJSON(endpoint, function(json, textStatus) {
 		console.log(json);
@@ -38,7 +38,7 @@ $('#storeLocatorGo').on("click", function() {
 	var limit = $("#storeLimit").val();
 	var devKey = $("#devKeyStoreLocator").val();
 
-	"http://api.target.com/v2/store?nearby=44.976034,-93.270196&range=10&limit=100&locale=en-US&key=ltVVgaQ8HQNxDADa7FPyVJifTuRIItIL"
+	"https://api.target.com/v2/store?nearby=44.976034,-93.270196&range=10&limit=100&locale=en-US&key=ltVVgaQ8HQNxDADa7FPyVJifTuRIItIL"
 
 	var endpoint = 'http://api.target.com/v2/store?nearby=' + location + '&range=' + range + '&limit=' + limit + '&locale=en-US&key=' + devKey;
 
